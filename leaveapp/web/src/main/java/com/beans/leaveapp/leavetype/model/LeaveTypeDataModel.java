@@ -19,7 +19,7 @@ public class LeaveTypeDataModel extends ListDataModel<LeaveType> implements Sele
     public LeaveType getRowData(String rowKey) {
         //In a real app, a more efficient way like a query by rowKey should be implemented to deal with huge data
         
-        List<LeaveType> leaveTypeList = (List<LeaveType>) getWrappedData();
+        List<LeaveType> leaveTypeList = (List<LeaveType>)getWrappedData();
         Integer rowKeyInt = Integer.parseInt(rowKey);
         for(LeaveType leaveType : leaveTypeList) {
             if(leaveType.getId() == rowKeyInt) {
@@ -34,4 +34,5 @@ public class LeaveTypeDataModel extends ListDataModel<LeaveType> implements Sele
     public Object getRowKey(LeaveType leaveType) {
         return leaveType.getId();
     }
+    
 }

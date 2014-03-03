@@ -28,6 +28,15 @@ http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
  	</managed-property>
  </managed-bean>
  
+  <managed-bean>
+ 	<managed-bean-name>employeeGradeMgmtBean</managed-bean-name>
+ 	<managed-bean-class>com.beans.leaveapp.EmployeeGrade.bean.EmployeeGradeManagementBean</managed-bean-class>
+ 	<managed-bean-scope>view</managed-bean-scope>
+ 	<managed-property>
+ 		<property-name>employeeGradeService</property-name>
+ 		<value>#{employeeGradeService}</value>
+ 	</managed-property>
+ </managed-bean> 
  <managed-bean>
  	<managed-bean-name>authenticationBean</managed-bean-name>
  	<managed-bean-class>com.beans.leaveapp.web.bean.AuthenticationBean</managed-bean-class>
