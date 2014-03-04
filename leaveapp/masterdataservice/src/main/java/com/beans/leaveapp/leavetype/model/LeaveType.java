@@ -10,12 +10,12 @@ import org.hibernate.annotations.Type;
 
 
 @Entity
-@Table(name="LEAVETYPE")
+@Table(name="leavetype")
 public class LeaveType {
 	private int id;
 	private String name;
 	private String description;
-	private boolean isDeleted = false;
+	private boolean isDeleted= false;
 	
 	@Id
 	@GeneratedValue

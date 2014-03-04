@@ -14,7 +14,7 @@
 <ui:define name="content">
 		<h:form id="leaveTypeTableForm">
 
-		
+	 	
         <p:dataTable id="leaveTypeTable" var="leaveType0" value="#{leaveTypeMgmtBean.leaveTypeDataModel}" rowKey="#{leaveType0.id}"
                  selection="#{leaveTypeMgmtBean.selectedLeaveType}" selectionMode="single" >
           <p:ajax event="rowSelect" listener="#{leaveTypeMgmtBean.onRowSelect}" update=":leaveTypeDetailForm:display, :growl" oncomplete="PF('leaveTypeDialog').show()" />  
@@ -77,7 +77,7 @@
               </h:form>
           </p:dialog>
           
-          <p:confirmDialog message="Are you sure?" header="Deleting leave type" 
+          <p:confirmDialog message="Are you sure?" header="Deleting employee grade" 
           	severity="alert" widgetVar="cd">	
 			<h:form>
 			<p:commandButton value="Yes" actionListener="#{leaveTypeMgmtBean.doDeleteLeaveType}" update=":leaveTypeTableForm:leaveTypeTable" oncomplete="PF('cd').hide();"/>

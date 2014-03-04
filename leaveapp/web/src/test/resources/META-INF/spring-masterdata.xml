@@ -19,15 +19,24 @@
         <property name="entityManagerFactory" ref="entityManagerFactory"/>
     </bean>
 
-    <jpa:repositories base-package="com.beans.leaveapp"></jpa:repositories>
+    <jpa:repositories base-package="com.beans.leaveapp">
+    </jpa:repositories>
+   
 	
 	
 	<!-- Model and Service declarations -->
-	
+	<context:annotation-config/>
 	<context:component-scan base-package="com.bean.leaveapp" />
 	
-	<bean id="leaveType" class="com.beans.leaveapp.leavetype.model.LeaveType" />
+	
+	<bean id="leaveType" class="com.beans.leaveapp.leavetype.model.LeaveType" /> 
 
 	<bean id="leaveTypeService" class="com.beans.leaveapp.leavetype.service.LeaveTypeServiceImpl">
 	</bean>
+	  <bean id="employeeGrade" class="com.beans.leaveapp.employeeGrade.model.EmployeeGrade" /> 
+	
+	 <bean id="employeeGradeService" class="com.beans.leaveapp.employeeGrade.service.EmployeeGradeServiceImpl" >
+	 </bean>  
+	
+	
 </beans>
